@@ -1,11 +1,11 @@
-import "./App.css";
+import './App.css';
 
 function App() {
-    return (
+  return (
         <div className="App">
             <p>FORUM</p>
         </div>
-    );
+  );
 }
 
 export default App;
