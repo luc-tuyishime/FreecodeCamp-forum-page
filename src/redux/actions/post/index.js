@@ -1,3 +1,3 @@
-import post from './fetchPost';
+import post from "./fetchPost";
 
 export { post };

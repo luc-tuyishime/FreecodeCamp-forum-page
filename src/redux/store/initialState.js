@@ -1,3 +1,3 @@
-const post = require('./initialStates/postInitialState');
+const post = require("./initialStates/postInitialState");
 
 module.exports = { post };

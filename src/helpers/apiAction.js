@@ -1,15 +1,15 @@
-import { apiActionsTypes } from '../redux/actions-types';
+import { apiActionsTypes } from "../redux/actions-types";
 
 export default ({
-  url = '',
-  method = 'GET',
+  url = "",
+  method = "GET",
   data = null,
   httpOptions = {},
   onStart = apiActionsTypes.API_REQUEST_START,
   onEnd = apiActionsTypes.API_REQUEST_END,
   onSuccess = apiActionsTypes.API_REQUEST_SUCCESS,
   onFailure = apiActionsTypes.API_REQUEST_FAILURE,
-  label = ''
+  label = ""
 }) => ({
   type: apiActionsTypes.API_REQUEST,
   payload: {
