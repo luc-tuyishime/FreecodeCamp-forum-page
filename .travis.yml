@@ -1,7 +1,7 @@
 env:
     global:
         - NODE_ENV=test
-        - REACT_APP_BASE_URL=https://www.googleapis.com/books/v1
+        - REACT_APP_FORUM_BASE_URL=https://forum-proxy.freecodecamp.rocks
         - CC_TEST_REPORTER_ID=d43031f55998206172c77fb2bc3c560af8d54e2747e10927abeea54ca5740e95
 language: node_js
 node_js:
