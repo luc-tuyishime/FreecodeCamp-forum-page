@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/13b01c32cb267bf5c5dd/maintainability)](https://codeclimate.com/github/luc-tuyishime/FreecodeCamp-forum-page/maintainability)
+
 FreecodeCamp Forum page.
 
 -   List most recent posts on the freeCodeCamp website
@@ -12,6 +14,8 @@ FreecodeCamp Forum page.
 -   npm
 
 ### Tools Used
+
+[Airbnb](https://github.com/airbnb/javascript) : Style Guide.
 
 [Travis](https://travis-ci.org/) : Continuous Integration.
 
