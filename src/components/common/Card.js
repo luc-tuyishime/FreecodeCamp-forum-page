@@ -5,6 +5,7 @@ import "dotenv/config";
 
 import { getTimeAgo } from "../../helpers/getTimeAgo";
 import { openInNewTab } from "../../helpers/openInNewTab";
+import ContentFooter from "./contentFooter";
 import "./card.scss";
 
 const { REACT_APP_AVATAR_URL, REACT_APP_URL, REACT_APP_USER_PROFILE } = process.env;
@@ -18,19 +19,20 @@ const CardItem = ({ replies, views, last_posted_at, title, slug, images, history
             actions={[
                 <div className="content-bottom">
                     <Row>
-                        <Col xs={9} xl={8} span={8}>
-                            <div>
-                                <p className="card-footer-title">Replies</p>
-                                <p className="card-footer">{replies}</p>
-                            </div>
-                        </Col>
-
-                        <Col xs={6} xl={8} span={8}>
-                            <div>
-                                <p className="card-footer-title">Views</p>
-                                <p className="card-footer">{views}</p>
-                            </div>
-                        </Col>
+                        <ContentFooter
+                            xs={9}
+                            xl={8}
+                            span={8}
+                            textTitle="Replies"
+                            textValue={replies}
+                        />
+                        <ContentFooter
+                            xs={9}
+                            xl={8}
+                            span={8}
+                            textTitle="Views"
+                            textValue={views}
+                        />
 
                         <Col xs={6} xl={8} span={8}>
                             <div>
