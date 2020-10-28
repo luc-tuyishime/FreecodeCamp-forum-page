@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/13b01c32cb267bf5c5dd/maintainability)](https://codeclimate.com/github/luc-tuyishime/FreecodeCamp-forum-page/maintainability)[![Build Status](https://travis-ci.com/luc-tuyishime/FreecodeCamp-forum-page.svg?branch=master)](https://travis-ci.com/luc-tuyishime/FreecodeCamp-forum-page)
+[![Maintainability](https://api.codeclimate.com/v1/badges/13b01c32cb267bf5c5dd/maintainability)](https://codeclimate.com/github/luc-tuyishime/FreecodeCamp-forum-page/maintainability) [![Build Status](https://travis-ci.com/luc-tuyishime/FreecodeCamp-forum-page.svg?branch=master)](https://travis-ci.com/luc-tuyishime/FreecodeCamp-forum-page)
 
 FreecodeCamp Forum page.
 
