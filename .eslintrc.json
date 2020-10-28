@@ -12,11 +12,11 @@
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": false,
+            "jsx": true,
             "experimentalObjectRestSpread": true,
             "modules": false
         },
-        "ecmaVersion": 2018,
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": ["react"],
@@ -26,6 +26,9 @@
         }
     },
     "rules": {
+        "no-plusplus": "off",
+        "max-len": ["error", { "code": 130 }],
+        "camelcase": "off",
         "object-curly-newline": [
             "error",
             {
@@ -39,12 +42,11 @@
                 "property": "disallowedPropertyName"
             }
         ],
-        "no-nested-ternary": "off",
+        "no-nested-ternary": 0,
         "no-use-before-define": ["error", { "variables": false }],
         "function-paren-newline": ["error", "multiline"],
         "import/no-named-as-default": 0,
         "import/prefer-default-export": 0,
-        "react/prop-types": 1,
         "react/jsx-uses-react": "error",
         "react/jsx-filename-extension": [
             1,
@@ -60,13 +62,13 @@
         "valid-jsdoc": [
             "error",
             {
-                "requireReturn": true,
+                "requireReturn": false,
                 "requireReturnType": true,
                 "requireParamDescription": false,
                 "requireReturnDescription": true
             }
         ],
-        "quotes": ["error", "single"],
+        "quotes": ["error", "double"],
         "no-shadow": "off",
         "import/no-extraneous-dependencies": [
             "error",

@@ -1,4 +1,4 @@
-import { postActionsTypes } from '../../actions-types';
+import { postActionsTypes } from "../../actions-types";
 
 export default (state, { type, payload }) => {
   switch (type) {
@@ -7,7 +7,7 @@ export default (state, { type, payload }) => {
         ...state,
         fetchPosts: {
           ...state.fetchPosts,
-          message: '',
+          message: "",
           loading: true,
           errors: {}
         }
@@ -23,7 +23,8 @@ export default (state, { type, payload }) => {
     case postActionsTypes.GET_POST_SUCCESS:
       return {
         ...state,
-        listOfPost: payload,
+        listOfPost: payload?.topic_list?.topics,
+        listOfUsers: payload?.users,
         fetchPosts: {
           loading: false,
           message: payload.message,
@@ -35,7 +36,7 @@ export default (state, { type, payload }) => {
         ...state,
         fetchPosts: {
           loading: false,
-          message: '',
+          message: "",
           errors: payload.errors
         }
       };

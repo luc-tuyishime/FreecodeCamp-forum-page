@@ -11,6 +11,12 @@ FreecodeCamp Forum page.
 -   NodeJS
 -   npm
 
+### Tools Used
+
+[Travis](https://travis-ci.org/) : Continuous Integration.
+
+[Code climate](https://codeclimate.com/about/) : Code quality and maintainability.
+
 ### Clone the project
 
 ### Install dependencies
@@ -20,3 +26,13 @@ FreecodeCamp Forum page.
 ### Run the project
 
 `npm start`
+
+## Contributor
+
+-   Jean luc Tuyishime <luctunechi45@gmail.com>
+
+---
+
+## License & copyright
+
+Copyright (c) Jean luc Tuyishime, Software developer

@@ -1,21 +1,7 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-const { location } = window;
-const protocol = location.protocol && location.protocol;
-const hostname = location.hostname && location.hostname;
-const port = (location.port && `:${location.port}`) || '';
+const { REACT_APP_FORUM_BASE_URL } = process.env;
 
-const { REACT_APP_FORUM_BASE_URL, REACT_APP_URL_FRONTEND } = process.env;
+const backend = { reactUrl: REACT_APP_FORUM_BASE_URL };
 
-const frontend = {
-  reactUrl: REACT_APP_URL_FRONTEND,
-  herokuUrl: '',
-  defaultUrl: `${protocol}//${hostname}${port ? `:${port}` : ''}`
-};
-
-const backend = {
-  reactUrl: REACT_APP_FORUM_BASE_URL,
-  defaultUrl: `${protocol}//${hostname}${port ? `:${port}` : ''}`
-};
-
-export { frontend, backend };
+export { backend };

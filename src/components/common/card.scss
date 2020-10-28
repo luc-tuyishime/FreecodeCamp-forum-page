@@ -1,0 +1,49 @@
+.card-component {
+    padding-bottom: 14px !important;
+
+    .content-up {
+        text-align: center;
+    }
+
+    .content-middle {
+        & p {
+            text-align: left;
+            font-size: 13px !important;
+        }
+    }
+
+    .card-footer {
+        color: #616161 !important;
+        font-size: 15px !important;
+    }
+
+    .card-footer-title {
+        font-size: 13px !important;
+        text-align: center !important;
+    }
+
+    .post-title {
+        color: #0277bd !important;
+        font-size: 17px !important;
+    }
+
+    &:hover {
+        .post-title {
+            cursor: pointer !important;
+            text-decoration: underline !important;
+        }
+    }
+    .custom-card {
+        height: 280px !important;
+    }
+
+    .avatar-img {
+        cursor: pointer !important;
+    }
+
+    .inline-avatar {
+        display: inline-block;
+        justify-content: left;
+        align-items: left;
+    }
+}

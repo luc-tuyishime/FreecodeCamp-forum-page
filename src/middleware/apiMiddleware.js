@@ -1,8 +1,8 @@
-import axiosHelper from '../helpers/axiosHelper';
-import { apiActionsTypes } from '../redux/actions-types';
+import axiosHelper from "../helpers/axiosHelper";
+import { apiActionsTypes } from "../redux/actions-types";
 
 const apiMiddleware = ({ dispatch, getState }) => (next) => async ({
-  type = '',
+  type = "",
   payload = {}
 }) => {
   if (type !== apiActionsTypes.API_REQUEST) {
@@ -14,7 +14,7 @@ const apiMiddleware = ({ dispatch, getState }) => (next) => async ({
       payload.url,
       payload.data
     );
-    if (typeof payload.onSuccess === 'function') {
+    if (typeof payload.onSuccess === "function") {
       payload.onSuccess(data)(dispatch);
     } else {
       dispatch({ type: payload.onSuccess, payload: data });
@@ -26,7 +26,7 @@ const apiMiddleware = ({ dispatch, getState }) => (next) => async ({
     });
   }
 
-  if (typeof payload.onEnd === 'function') {
+  if (typeof payload.onEnd === "function") {
     payload.onEnd({ loading: false })(dispatch);
   } else {
     dispatch({ type: payload.onEnd, payload: { loading: false } });
