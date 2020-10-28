@@ -8,41 +8,43 @@ import "./forum.scss";
 
 class Forum extends Component {
     state = {
-      posts: [],
-      users: [],
-      loading: false
+        posts: [],
+        users: [],
+        loading: false
     };
 
-    findUsersWhoPosted = (id) => this.state.users.find((user) => (user.id === id ? user.avatar_template : ""));
+    findUsersWhoPosted = (id) =>
+        this.state.users.find((user) => (user.id === id ? user.avatar_template : ""));
 
     componentDidMount() {
-      const { post } = this.props;
-      post();
+        const { post } = this.props;
+        post();
     }
 
     static getDerivedStateFromProps(props) {
-      return {
-        posts: props?.listOfPost,
-        users: props?.listOfUsers,
-        loading: props?.loading
-      };
+        return {
+            posts: props?.listOfPost,
+            users: props?.listOfUsers,
+            loading: props?.loading
+        };
     }
 
     render() {
-      const { posts, loading } = this.state;
-      return (
+        return (
             <Row gutter={16} className="card-row">
-                {loading ? (
+                {this.state.loading ? (
                     <div className="loader-style">
                         <Spin tip="Loading...." size="large" />
                     </div>
                 ) : (
-                  posts.map((index) => {
-                    const { posters } = index;
-                    const images = [];
-                    posters?.map((poster) => images.push(this.findUsersWhoPosted(poster.user_id)));
+                    this.state.posts.map((index) => {
+                        const { posters } = index;
+                        const images = [];
+                        posters?.map((poster) =>
+                            images.push(this.findUsersWhoPosted(poster.user_id))
+                        );
 
-                    return (
+                        return (
                             <CardItem
                                 title={index.title}
                                 key={index.id}
@@ -51,20 +53,20 @@ class Forum extends Component {
                                 last_posted_at={index.last_posted_at}
                                 images={images}
                             />
-                    );
-                  })
+                        );
+                    })
                 )}
             </Row>
-      );
+        );
     }
 }
 
 const mapStateToProps = ({
-  post: {
-    listOfPost,
-    listOfUsers,
-    fetchPosts: { loading, message, errors }
-  }
+    post: {
+        listOfPost,
+        listOfUsers,
+        fetchPosts: { loading, message, errors }
+    }
 }) => ({ listOfPost, listOfUsers, loading, message, errors });
 
 export default connect(mapStateToProps, { post })(Forum);
