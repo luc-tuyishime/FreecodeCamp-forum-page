@@ -11,6 +11,7 @@
         "axios": "^0.21.0",
         "dotenv": "^8.2.0",
         "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.5",
         "moment": "^2.29.1",
         "moxios": "^0.4.0",
         "node-sass": "^4.14.1",
@@ -27,7 +28,7 @@
     "scripts": {
         "start": "react-scripts start && npm run lint",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "react-scripts test --watchAll",
         "eject": "react-scripts eject",
         "lint": "eslint . --fix"
     },
