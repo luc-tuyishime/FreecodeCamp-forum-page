@@ -6,16 +6,6 @@ import apiMiddleware from "../middleware/apiMiddleware";
 export { initialState };
 export const middlewares = [thunk, apiMiddleware];
 export const mockStore = configureMockStore(middlewares);
-export const adminStore = mockStore({
-    ...initialState,
-    user: {
-        ...initialState.user,
-        isAuth: true,
-        profile: { ...initialState.user.profile, role: "admin" }
-    }
-});
+export const adminStore = mockStore({ ...initialState });
 
-export default mockStore({
-    ...initialState,
-    user: { ...initialState.user, isAuth: true }
-});
+export default mockStore({ ...initialState });
